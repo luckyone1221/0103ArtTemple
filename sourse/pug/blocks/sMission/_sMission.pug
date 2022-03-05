@@ -7,7 +7,7 @@ mixin sMission(data)
 				h2 Our mission and goals
 				p In our temple, talented Ukrainian people are opening their souls to the world through drawings, illustrations, photos, videos, animations, music, poems, 3D and more. If these Ukrainian souls echo with you and if you want to save them from obliteration, join our initiative before it’s too late.
 			+e.row.row.gy-4
-				+sMissionItem('@2x/sMission-1.png', 'Help our army', 'The population of our country is much smaller and we need help from all those who are not indifferent so that our brave defenders have the necessary means for defense.')
+				+sMissionItem('@2x/sMission-1.png', 'Help our army', `The population of our country is much smaller and we need help from all those who are not indifferent so that our brave defenders have the&nbsp;necessary means for defense.`)
 				+sMissionItem('@2x/sMission-2.png', 'Share truth', 'Many of us are at the epicenter of the fighting and ready to tell the truth.')
 				+sMissionItem('@2x/sMission-1.png', 'Win the war', 'We are sure that if the whole world unites against tyranny, then it will be possible to beat the death of innocent victims.')
 	// end sMission
@@ -21,4 +21,4 @@ mixin sMissionItem(imgPass, title, descr)
 			.col.col-lg-12.text-lg-center
 				+e.txt-content
 					h4=title
-					p=descr
+					p!=descr

@@ -151,7 +151,7 @@
 	}
 	&__btn{
 		@extend .btn;
-		@extend .btn-warning;
+		@extend .btn-primary;
 		margin-top: auto;
 
 		min-width: rem(260);

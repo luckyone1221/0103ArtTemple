@@ -42,7 +42,9 @@
 		}
 
 		&:before{
-			content: '';
+			@include media-breakpoint-up(md){
+				content: '';
+			}
 			position: absolute;
 			z-index: 2;
 			bottom: -1px;
