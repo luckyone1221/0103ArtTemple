@@ -1,0 +1,85 @@
+// start .sWhom
+.sWhom {
+	--sPT: #{rem(60)};
+	--sPB: #{rem(60)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(116)};
+		--sPB: #{rem(121)};
+		--sTPB: #{rem(60)};
+	}
+	@include media-breakpoint-up(xl){
+		--sTPB: #{rem(110)};
+	}
+
+	&__row{
+		--bs-gutter-x: #{rem(31)};
+	}
+	&__col{
+		&--left{
+			@include media-breakpoint-up(xl){
+				width: calc(454px + var(--bs-gutter-x))!important;
+			}
+		}
+		&--right{
+			@include media-breakpoint-up(xl){
+				width: calc(100% - 454px - var(--bs-gutter-x)) !important;
+			}
+		}
+	}
+	&__img{
+		display: block;
+		border-radius: rem(27);
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.section-title{
+		@include media-breakpoint-up(xl){
+			padding-top: 10px;
+			//top: 5px;
+		}
+
+		&__img{
+			display: block;
+			border-radius: rem(27);
+			overflow: hidden;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(md){
+				margin-bottom: 0;
+			}
+		}
+
+		p{
+			margin-bottom: rem(27);
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			font-weight: 500;
+			span{
+				font-weight: 700;
+				color: $warning;
+			}
+		}
+	}
+
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+
+		min-width: rem(261);
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sWhom

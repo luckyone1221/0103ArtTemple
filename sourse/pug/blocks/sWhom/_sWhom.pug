@@ -1,0 +1,16 @@
+mixin sWhom(data)
+	// start sWhom
+	+b.SECTION.sWhom.section#sWhom&attributes(attributes)
+		.container.text-md-start.text-center
+			+e.row.row.align-items-center
+				+e.col--left.col-md-4.d-none.d-md-block
+					+e.img
+						img(loading="lazy" src="img/@2x/sWhom-img.png" alt="")
+				+e.col--right.col-md-8
+					+b.section-title
+						h2 Whom will you be helping?
+						+e.img.d-md-none
+							img(loading="lazy" src="img/@2x/sWhom-img.png" alt="")
+						p If you are not indifferent to the fate of the world and have the desire and opportunity to help Ukraine and Ukrainians in preserving their lives and country, join our charitable mission to support the defense of&nbsp;a&nbsp;small but brave country.
+					+e.btn(href="#") SUPPORT
+	// end sWhom

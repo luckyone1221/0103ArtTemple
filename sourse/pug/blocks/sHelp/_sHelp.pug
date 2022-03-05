@@ -1,0 +1,26 @@
+mixin sHelp(data)
+	// start sHelp
+	+b.SECTION.sHelp.section#sHelp&attributes(attributes)
+		+pic('sHelp-bg.jpg')(class="sHelp__bg")
+		.container.text-center.text-lg-start
+			+b.section-title
+				h2 Want to know how you can help?
+				p All NFT objects in our temple are created by Ukrainians. They’re unique and have a common thread&nbsp;-&nbsp;war in Ukraine. You can purchase any of the existing objects or place a custom order.
+			+e.row.row
+				+sHelpItem(1, 'For creators', 'If you’re a creator from Ukraine and you’d like to support our army, refugees or volunteers, please contact us. Remember: anything you’ve created can be turned into real-life support for Ukrainians who need it.')
+				+sHelpItem(2, 'For NFT* needs', 'Every NFT object has to have a unique value, feature, story. So the punch line here is that every single NFT object in our temple is saving someone’s life.')
+				+sHelpItem(3, 'Donate in other way', 'If you’re not a big fan of NFT or cryptocurrency, you can also donate to the official accounts of the Ukrainian Armed Forces or Ukrainian Volunteering Centre, but we’d prefer that you keep a symbol of our gratitude in NFT format.')
+			+e.read-more
+				| *If you don’t know what is NFT - read
+				|
+				a(href="#") more information.
+	// end sHelp
+
+mixin sHelpItem(imgNum, title, descr)
+	.col-lg-4
+		+e.item.text-center(href="#")
+			+e.ball
+				img(loading="lazy" src=`img/@2x/sHelp-${imgNum}.png` alt="")
+			+e.title=title
+			+e.descr=descr
+			+e.btn SUPPORT

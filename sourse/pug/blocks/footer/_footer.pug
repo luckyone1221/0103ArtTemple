@@ -1,9 +1,16 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col
-				.col
+			+e.row.row.align-items-center
+				.col-sm
+					+e.logo(href="/")
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col-sm-auto.d-none.d-lg-block
+					+e.menu
+						+mnu()
 				.col-auto
+					+soc()
+			+e.bot-box
+				+e.all-rights
+					span © All rights reserved arTemple -
+					span.set-curr-year-js 2019

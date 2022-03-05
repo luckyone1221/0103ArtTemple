@@ -1,43 +1,84 @@
 .footer {
-		
 	margin-top: auto;
+	background-color: $primary;
+	padding: rem(30) 0 rem(25);
 
-// 
-@include media-breakpoint-up(xl) {}
+	color: $white!important;
+	&__row{
+		margin-bottom: rem(30);
 
-@include media-breakpoint-up(lg) {}
+		--bs-gutter-x: #{rem(40)};
+		--bs-gutter-y: #{rem(30)};
+	}
+	&__logo{
+		display: block;
+		max-width: rem(260);
 
-@include media-breakpoint-up(md) {}
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
 
-@include media-breakpoint-up(sm) {}
+	&__menu{
+		& > ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
 
-@include media-breakpoint-up(xs) {}
+			display: flex;
+			align-items: center;
 
+			& > li{
+				margin-right: rem(24);
+				&:last-child{
+					margin-right: 0;
+				}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+				a{
+					white-space: nowrap;
+					font-weight: 600;
+					line-height: calc(25/20);
+					color: $white!important;
+				}
+			}
+		}
+	}
 
+	.soc{
+		display: flex;
+		align-items: center;
 
-// 
-@include media-breakpoint-only(xs) {}
+		&__item{
+			width: rem(36);
+			height: rem(36);
 
-@include media-breakpoint-only(sm) {}
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-@include media-breakpoint-only(md) {}
+			img{
+				width: 100%;
+				height: auto;
+			}
 
-@include media-breakpoint-only(lg) {}
+			margin-right: rem(13);
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
 
-@include media-breakpoint-only(xl) {}
+	&__bot-box{
+		padding: rem(15) 0;
+		border-top: 1px solid rgba($white, .75);
+	}
+	&__all-rights{
+		font-size: rem(12);
+		line-height: calc(15/12);
+		color: rgba($white, .75);
+	}
 
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+	&__{}
+	&__{}
 }

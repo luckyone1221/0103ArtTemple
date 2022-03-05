@@ -1,0 +1,21 @@
+mixin sWho(data)
+	// start sWho
+	+b.SECTION.sWho.section#sWho&attributes(attributes)
+		.container.text-md-start.text-center
+			+e.row.row.gy-4.align-items-center
+				+e.col--left.col-md-4.d-none.d-md-block
+					+e.img
+						img(loading="lazy" src="img/@2x/sWho-img.png" alt="")
+				+e.col--right.col-md-8
+					+b.section-title.pb-0
+						h2 Who we are
+						+e.img.d-md-none
+							img(loading="lazy" src="img/@2x/sWho-img.png" alt="")
+						p We are Ukrainians who cannot stay away from the genocide taking place in our country.
+						p
+							| This arTemple is a
+							|
+							span 100% non-profit initiative
+							|
+							| aimed at supporting the&nbsp;Ukrainian army and people who have suffered from a terrible war happening in Ukraine right now as you’re reading this message.
+	// end sWho

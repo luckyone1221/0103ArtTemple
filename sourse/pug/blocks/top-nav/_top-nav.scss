@@ -1,4 +1,127 @@
 .top-nav {
+	padding: rem(19) 0;
+	background: $blue;
+
+	//
+	.toggle-menu-mobile{
+		--color: #{$white} !important;
+	}
+
+	&__row{
+		--bs-gutter-x: #{rem(40)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(75)};
+		}
+	}
+	&__logo{
+		display: block;
+		max-width: rem(300);
+
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	//
+	&__menu{
+
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			display: flex;
+			align-items: center;
+
+			& > li{
+				margin-right: var(--bs-gutter-x, #{rem(24)});
+				&:last-child{
+					margin-right: 0;
+				}
+
+				a{
+					font-style: normal;
+					font-weight: 600;
+					line-height: calc(25/20);
+					color: $white;
+
+					&:hover{
+						color: rgba($white, .8);
+					}
+				}
+
+			}
+		}
+	}
+
+	&__langs-box{
+		position: relative;
+		&:hover{
+			--dd-scale: 1;
+		}
+	}
+	&__inner{
+		font-weight: 600;
+		line-height: calc(25/20);
+		color: $white;
+
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		&:after{
+			content: '';
+			display: inline-block;
+			margin-left: 3px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 3px 0 3px;
+			border-color: $white transparent transparent transparent;
+		}
+
+		span{
+			display: inline-block;
+			border-top: 1px solid transparent;
+			border-bottom: 1px solid $white;
+		}
+	}
+	&__dd{
+		@include mt();
+		transform-origin: top;
+		transform: scaleY(var(--dd-scale, 0));
+		position: absolute;
+		z-index: 99;
+		top: calc(100% + 10px);
+		right: 0;
+
+		background-color: $white;
+		border: 1px solid $gray-300;
+		box-shadow: 0 0 8px 0 rgba($black, .5);
+		border-radius: rem(8);
+		padding: rem(10);
+	}
+	&__lang-item{
+		display: block;
+
+		padding-bottom: rem(4);
+		border-bottom: 1px solid $gray-200;
+		margin-bottom: rem(4);
+
+		&:last-child{
+			padding-bottom: 0;
+			border-bottom: none;
+			margin-bottom: 0;
+		}
+
+		color: $black;
+		&:hover{
+			color: $blue;
+			text-shadow: 0 0 .7px rgba($blue, .75);
+		}
+	}
+	&__{}
 
 	p{
 		@include ell();

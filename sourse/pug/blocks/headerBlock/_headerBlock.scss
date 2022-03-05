@@ -1,8 +1,130 @@
 // start .headerBlock
 .headerBlock {
-	&__{}
-	&__{}
-	&__{}
+	--sPT: #{rem(160)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(223)};
+		--sPB: #{rem(125)};
+		--sTPB: #{rem(87)};
+	}
+
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	@include media-breakpoint-up(lg){
+		min-height: min(771px, 100vh);
+	}
+
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		//border-radius: 50%;
+		//overflow: hidden;
+
+		img{
+			width: 100%;
+			height: calc(100% - 1px);
+			object-fit: cover;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(82, 93, 208, 0.65) 14.4%, rgba(255, 209, 1, 0.2145) 69.9%);
+		}
+
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: 2;
+			bottom: -1px;
+			left: 50%;
+			transform: translateX(-50%);
+			min-width: 100vw;
+
+			width: 1920px;
+			height: 166px;
+
+			background-image: url(../img/svg/headerBlock-cover.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+	}
+
+	&__row{
+
+	}
+	.section-title{
+		color: $white;
+		h1{
+			font-weight: bold;
+			line-height: calc(68/54);
+			margin-bottom: rem(25);
+		}
+		p{
+			max-width: 431px;
+
+			font-weight: 500;
+			line-height: calc(27/20);
+			color: $white;
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-warning;
+		min-width: rem(260);
+
+	}
+	.soc{
+		display: flex;
+		align-items: center;
+
+		@include media-breakpoint-up(md){
+			display: block;
+		}
+
+		@include media-breakpoint-up(xl){
+			padding-top: rem(50);
+		}
+
+		&__item{
+			@include mt();
+			&:hover{
+				transform: scale(1.2);
+			}
+
+			width: rem(36);
+			height: rem(36);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+
+			margin: 0 rem(15) 0 0;
+			@include media-breakpoint-up(md){
+				margin: 0 0 rem(15);
+			}
+
+			&:last-child{
+				margin: 0;
+			}
+		}
+	}
 	&__{}
 	&__{}
 	&__{}

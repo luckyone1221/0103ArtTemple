@@ -1,0 +1,24 @@
+// start .sLiteraly
+.sLiteraly {
+	--sPT: #{rem(60)};
+	--sPB: #{rem(60)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(115)};
+		--sPB: #{rem(115)};
+	}
+
+	.section-title{
+		&:last-child{
+			padding-bottom: 0;
+		}
+
+		h2{
+			@extend .h1;
+			line-height: calc(85/54);
+		}
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sLiteraly
