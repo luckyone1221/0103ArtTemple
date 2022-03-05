@@ -35,7 +35,7 @@ mixin modal(data)
 
 mixin modalPlatform(imgNum, title, href="#", btnTxt, descr)
 	+e.col.col-sm-4
-		+e.item.text-center(href="#" target="_blank")
+		+e.item.text-center(href=href target="_blank")
 			+e.box
 				img(loading="lazy" src=`img/@2x/modalPlatform-${imgNum}.png` alt="")
 			+e.title-box
