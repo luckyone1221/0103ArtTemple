@@ -4,12 +4,21 @@ mixin sMission(data)
 		+pic('sMission.jpg')(class="sMission__bg")
 		.container
 			+b.section-title
-				h2 Our mission and goals
-				p In our temple, talented Ukrainian people are opening their souls to the world through drawings, illustrations, photos, videos, animations, music, poems, 3D and more. If these Ukrainian souls echo with you and if you want to save them from obliteration, join our initiative before it’s too late.
+				if data.lang === 'en'
+					h2 Our mission and goals
+					p In our temple, talented Ukrainian people are opening their souls to the world through drawings, illustrations, photos, videos, animations, music, poems, 3D and more. If these Ukrainian souls echo with you and if you want to save them from obliteration, join our initiative before it’s too late.
+				if data.lang === 'ua'
+					h2 Наша місія та цілі
+					p В arTemple талановиті українці відкривають світові свої душі: через малюнки, ілюстрації, фотографії, відео, музику, вірші, анімацію, 3D тощо. Якщо ці українські душі перегукуються з вами, і якщо ви хочете врятувати їх від знищення – долучайтесь до нашої ініціативи, поки ще є час.
 			+e.row.row.gy-4
-				+sMissionItem('@2x/sMission-1.png', 'Help our army', `The population of our country is much smaller and we need help from all those who are not indifferent so that our brave defenders have the&nbsp;necessary means for defense.`)
-				+sMissionItem('@2x/sMission-2.png', 'Share truth', 'Many of us are at the epicenter of the fighting and ready to tell the truth.')
-				+sMissionItem('@2x/sMission-1.png', 'Win the war', 'We are sure that if the whole world unites against tyranny, then it will be possible to beat the death of innocent victims.')
+				if data.lang === 'en'
+					+sMissionItem('@2x/sMission-1.png', 'Help our army', `The population of our country is much smaller and we need help from all those who are not indifferent so that our brave defenders have the&nbsp;necessary means for defense.`)
+					+sMissionItem('@2x/sMission-2.png', 'Share truth', 'Many of us are at the epicenter of the fighting and ready to tell the truth.')
+					+sMissionItem('@2x/sMission-3.png', 'Win the war', 'We are sure that if the whole world unites against tyranny, then it will be possible to beat the death of innocent victims.')
+				if data.lang === 'ua'
+					+sMissionItem('@2x/sMission-1.png', 'Допомогти нашій армії', `Населення нашої країни значно менше, ніж загарбницької, і нам потрібна допомога від усіх небайдужих, щоб наші хоробрі захисники отримали необхідні засоби для оборони.`)
+					+sMissionItem('@2x/sMission-2.png', 'Поділитися правдою', 'Багато хто з нас перебуває у самому епіцентрі бойових дій, і ми готові сказати правду.')
+					+sMissionItem('@2x/sMission-3.png', 'Виграти війну', 'Ми впевнені, якщо весь світ об’єднається проти тиранії, ми зможемо перемогти та зупинити смерть невинних жертв.')
 	// end sMission
 
 mixin sMissionItem(imgPass, title, descr)

@@ -1,5 +1,7 @@
 // start .sHelp
 .sHelp {
+	overflow: hidden;
+
 	--sPT: #{rem(80)};
 	--sPB: #{rem(60)};
 	--sTPB: #{rem(45)};

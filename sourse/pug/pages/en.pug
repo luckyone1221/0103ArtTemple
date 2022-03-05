@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sWho/_sWho.pug
+include ../blocks/sMission/_sMission.pug
+include ../blocks/sHelp/_sHelp.pug
+include ../blocks/sWhom/_sWhom.pug
+include ../blocks/sLiteraly/_sLiteraly.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg='1.png'
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav({
+			lang: 'en'
+		})
+	+headerBlock({
+		lang: 'en'
+	})
+	+sWho({
+		lang: 'en'
+	})
+	+sMission({
+		lang: 'en'
+	})
+	+sWhom({
+		lang: 'en'
+	})
+	+sHelp({
+		lang: 'en'
+	})
+	+sLiteraly({
+		lang: 'en'
+	})
+	+footer({
+		lang: 'en'
+	})

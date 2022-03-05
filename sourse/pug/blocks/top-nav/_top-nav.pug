@@ -12,27 +12,33 @@ mixin mob-mnu()
 			+mnu()
 	//  мобильное меню
 
-mixin top-nav() 
+mixin top-nav(data)
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row.align-items-center
 				.col
 					+e.logo(href="/")
-						img(loading="lazy" src="img/svg/logo.svg" alt="")
+						img(loading="lazy" src="img/svg/logo-3.svg" alt="")
 				.col-auto.d-none.d-lg-block
 					+e.menu
-						+mnu()
+						if data.lang === "en"
+							+mnu()
+						if data.lang === "ua"
+							+mnuUa()
 				.col-auto
 					+e.langs-box
 						+e.inner
-							span EN
+							if data.lang === "en"
+								span EN
+							if data.lang === "ua"
+								span UA
 						+e.dd
-							+topNavItem('EN')
-							+topNavItem('UA')
+							+topNavItem('EN', '/en.html')
+							+topNavItem('UA', '/ua.html')
 				.col-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav
 
-mixin topNavItem(txt)
-	+e.lang-item(href="#")=txt
+mixin topNavItem(txt, href="")
+	+e.lang-item(href=href)=txt

@@ -5,6 +5,12 @@
 		"Buy NFT":"#sWhom",
 		"Offer help":"#sHelp",
 		}
+	var navUa = {
+		"Про нас": "#sWho",
+		"Наша місія": "#sMission",
+		"Придбати NFT": "#sWhom",
+		"Запропонувати допомогу": "#sHelp",
+	}
 -
 	//- var subnav= { 
 	//- 	"Строительство загородных домов":"#",
@@ -17,6 +23,11 @@
 mixin mnu()
 	ul.menu
 		each linkPatch, linkName in nav
+			li.menu-item: a(href=linkPatch)=linkName
+
+mixin mnuUa()
+	ul.menu
+		each linkPatch, linkName in navUa
 			li.menu-item: a(href=linkPatch)=linkName
 
 //- menu

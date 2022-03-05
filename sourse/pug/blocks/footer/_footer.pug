@@ -1,16 +1,24 @@
-mixin footer()
+mixin footer(data)
 	+b.FOOTER.footer
 		.container
 			+e.row.row.align-items-center
 				.col-sm
 					+e.logo(href="/")
-						img(loading="lazy" src="img/svg/logo.svg" alt="")
+						img(loading="lazy" src="img/svg/logo-3.svg" alt="")
 				.col-sm-auto.d-none.d-lg-block
 					+e.menu
-						+mnu()
+						if data.lang === 'en'
+							+mnu()
+						if data.lang === 'ua'
+							+mnuUa()
 				.col-auto
 					+soc()
 			+e.bot-box
-				+e.all-rights
-					span © All rights reserved arTemple -
-					span.set-curr-year-js 2019
+				if data.lang === 'en'
+					+e.all-rights
+						span © All rights reserved arTemple -
+						span.set-curr-year-js 2019
+				if data.lang === 'ua'
+					+e.all-rights
+						span © arTemple Всі права захищені-
+						span.set-curr-year-js 2019

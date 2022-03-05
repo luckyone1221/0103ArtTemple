@@ -8,9 +8,18 @@ mixin sWhom(data)
 						img(loading="lazy" src="img/@2x/sWhom-img.png" alt="")
 				+e.col--right.col-md-8
 					+b.section-title
-						h2 Whom will you be helping?
+						if data.lang === 'en'
+							h2 Whom will you be helping?
+						if data.lang === 'ua'
+							h2 Кому ви зможете допомогти?
 						+e.img.d-md-none
 							img(loading="lazy" src="img/@2x/sWhom-img.png" alt="")
-						p If you are not indifferent to the fate of the world and have the desire and opportunity to help Ukraine and Ukrainians in preserving their lives and country, join our charitable mission to support the defense of&nbsp;a&nbsp;small but brave country.
-					+e.btn(href="#") SUPPORT
+						if data.lang === 'en'
+							p If you are not indifferent to the fate of the world and have the desire and opportunity to help Ukraine and Ukrainians in preserving their lives and country, join our charitable mission to support the defense of&nbsp;a&nbsp;small but brave country.
+						if data.lang === 'ua'
+							p Якщо вам небайдужа доля світу, ви маєте бажання та можливість допомогти Україні та українцям зберегти наші життя та країну, долучайтесь до нашої благодійної місії – підтримати захист маленької, але хороброї країни.
+					if data.lang === 'en'
+						+e.btn(href="#") SUPPORT
+					if data.lang === 'ua'
+						+e.btn(href="#") ДОПОМОГТИ
 	// end sWhom
