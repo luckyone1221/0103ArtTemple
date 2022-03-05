@@ -89,7 +89,7 @@
 								<h1>arTemple.<br/>Створено українцями.<br/>Для українців.</h1>
 								<p>Нас надихає те, що ми бачимо, що відчуваємо, за що боремося та проти чого б’ємося.</p>
 							</div>
-							<a class="headerBlock__btn" href="#">ДОПОМОГТИ
+							<a class="headerBlock__btn" href="#sHelp">ДОПОМОГТИ
 							</a>
 						</div>
 						<div class="col-md-auto">
@@ -210,7 +210,7 @@
 								</div>
 								<p>Якщо вам небайдужа доля світу, ви маєте бажання та можливість допомогти Україні та українцям зберегти наші життя та країну, долучайтесь до нашої благодійної місії – підтримати захист маленької, але хороброї країни.</p>
 							</div>
-							<a class="sWhom__btn" href="#">ДОПОМОГТИ
+							<a class="sWhom__btn" href="#sHelp">ДОПОМОГТИ
 							</a>
 						</div>
 					</div>
@@ -234,45 +234,57 @@
 					</div>
 					<div class="sHelp__row row">
 						<div class="col-lg-4">
-							<a class="sHelp__item text-center" href="#">
+							<div class="sHelp__item text-center">
 								<div class="sHelp__ball"><img loading="lazy" src="img/@2x/sHelp-1.png" alt=""/>
 								</div>
 								<div class="sHelp__title">Для митців
 								</div>
 								<div class="sHelp__descr">Якщо ви автор з України, хочете підтримати нашу армію та розділяєте наші волонтерські цінності – напишіть нам. Пам’ятайте – все, що ви створюєте, можна перетворити на реальну підтримку українців, які цього потребують вже зараз.
 								</div>
-								<div class="sHelp__btn">ДОПОМОГТИ
-								</div>
-							</a>
+								<a class="sHelp__btn" href="files/For_creators_ua.pdf" target="_blank">ДІЗНАТИСЯ БІЛЬШЕ
+								</a>
+								<!--if data.lang === 'en'-->
+								<!--	+e.btn FIND OUT MORE-->
+								<!--if data.lang === 'ua'-->
+								<!--	+e.btn ДІЗНАТИСЯ БІЛЬШЕ-->
+							</div>
 						</div>
 						<div class="col-lg-4">
-							<a class="sHelp__item text-center" href="#">
+							<div class="sHelp__item text-center">
 								<div class="sHelp__ball"><img loading="lazy" src="img/@2x/sHelp-2.png" alt=""/>
 								</div>
 								<div class="sHelp__title">Для шанувальників NFT
 								</div>
 								<div class="sHelp__descr">Кожен NFT-об’єкт повинен мати власну історію та цінність, тож в нашому arTemple кожен об’єкт – це реальна можливість зберегти чиєсь життя.
 								</div>
-								<div class="sHelp__btn">ДОПОМОГТИ
-								</div>
-							</a>
+								<a class="sHelp__btn link-modal-js" href="#modal-nft">ДІЗНАТИСЯ БІЛЬШЕ
+								</a>
+								<!--if data.lang === 'en'-->
+								<!--	+e.btn FIND OUT MORE-->
+								<!--if data.lang === 'ua'-->
+								<!--	+e.btn ДІЗНАТИСЯ БІЛЬШЕ-->
+							</div>
 						</div>
 						<div class="col-lg-4">
-							<a class="sHelp__item text-center" href="#">
+							<div class="sHelp__item text-center">
 								<div class="sHelp__ball"><img loading="lazy" src="img/@2x/sHelp-3.png" alt=""/>
 								</div>
 								<div class="sHelp__title">Допомогти в інший спосіб
 								</div>
 								<div class="sHelp__descr">Якщо ви не є шанувальником технології NFT чи криптовалюти, ви можете зробити пожертву безпосередньо на офіційні рахунки Збройних Сил України чи Українського волонтерського центра, проте ми б хотіли, аби ви отримали символ нашої вдячності у форматі NFT.
 								</div>
-								<div class="sHelp__btn">ДОПОМОГТИ
-								</div>
-							</a>
+								<a class="sHelp__btn link-modal-js" href="#modal-donate">ДІЗНАТИСЯ БІЛЬШЕ
+								</a>
+								<!--if data.lang === 'en'-->
+								<!--	+e.btn FIND OUT MORE-->
+								<!--if data.lang === 'ua'-->
+								<!--	+e.btn ДІЗНАТИСЯ БІЛЬШЕ-->
+							</div>
 						</div>
 					</div>
 					<div class="sHelp__read-more">
 						* Якщо ви не знаєте, що таке NFT -
-						<a href="#">читайте детальну інформацію.</a>
+						<a href="files/What_is_NFT_ua.pdf" target="_blank">читайте детальну інформацію.</a>
 					</div>
 				</div>
 			</section>
@@ -321,6 +333,113 @@
 						<div class="footer__all-rights"><span>© arTemple Всі права захищені-</span><span class="set-curr-year-js">2019</span>
 						</div>
 					</div>
+					<!--  start modals-->
+					<div id="modal-nft" style="display: none">
+						<div class="modal-win">
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__main-title text-center">
+										<h2>Select platform to buy NFT</h2>
+									</div>
+									<div class="form-wrap__row row gy-4">
+										<div class="form-wrap__col col-sm-4">
+											<a class="form-wrap__item text-center" href="#" target="_blank">
+												<div class="form-wrap__box"><img loading="lazy" src="img/@2x/modalPlatform-1.png" alt=""/>
+												</div>
+												<div class="form-wrap__title-box">
+													<div class="form-wrap__title">Binance
+													</div>
+												</div>
+												<div class="form-wrap__btn">КУПИТИ
+												</div>
+											</a>
+										</div>
+										<div class="form-wrap__col col-sm-4">
+											<a class="form-wrap__item text-center" href="#" target="_blank">
+												<div class="form-wrap__box"><img loading="lazy" src="img/@2x/modalPlatform-2.png" alt=""/>
+												</div>
+												<div class="form-wrap__title-box">
+													<div class="form-wrap__title">OpenSea
+													</div>
+												</div>
+												<div class="form-wrap__btn">КУПИТИ
+												</div>
+											</a>
+										</div>
+										<div class="form-wrap__col col-sm-4">
+											<a class="form-wrap__item text-center" href="#" target="_blank">
+												<div class="form-wrap__box"><img loading="lazy" src="img/@2x/modalPlatform-3.png" alt=""/>
+												</div>
+												<div class="form-wrap__title-box">
+													<div class="form-wrap__title">Nifty Gateway
+													</div>
+												</div>
+												<div class="form-wrap__btn">КУПИТИ
+												</div>
+											</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="modal-donate" style="display: none">
+						<div class="modal-win">
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__main-title text-center">
+										<h2>Select platform to buy NFT</h2>
+									</div>
+									<div class="form-wrap__row row gy-4">
+										<div class="form-wrap__col col-sm-4">
+											<a class="form-wrap__item text-center" href="#" target="_blank">
+												<div class="form-wrap__box"><img loading="lazy" src="img/@2x/modalPlatform-4.png" alt=""/>
+												</div>
+												<div class="form-wrap__title-box">
+													<div class="form-wrap__title">Повернися живим
+													</div>
+													<div class="form-wrap__descr">Мета - забезпечити українську армію необхідною технікою.
+													</div>
+												</div>
+												<div class="form-wrap__btn">DONATE
+												</div>
+											</a>
+										</div>
+										<div class="form-wrap__col col-sm-4">
+											<a class="form-wrap__item text-center" href="#" target="_blank">
+												<div class="form-wrap__box"><img loading="lazy" src="img/@2x/modalPlatform-5.png" alt=""/>
+												</div>
+												<div class="form-wrap__title-box">
+													<div class="form-wrap__title">Твоя опора
+													</div>
+													<div class="form-wrap__descr">Мета – допомогти постраждалим від військових дій в Україні.
+													</div>
+												</div>
+												<div class="form-wrap__btn">DONATE
+												</div>
+											</a>
+										</div>
+										<div class="form-wrap__col col-sm-4">
+											<a class="form-wrap__item text-center" href="#" target="_blank">
+												<div class="form-wrap__box"><img loading="lazy" src="img/@2x/modalPlatform-6.png" alt=""/>
+												</div>
+												<div class="form-wrap__title-box">
+													<div class="form-wrap__title">Пожертва
+													</div>
+													<div class="form-wrap__descr">...
+													</div>
+												</div>
+												<div class="form-wrap__btn">DONATE
+												</div>
+											</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!-- #modal-call-->
+					<!-- end modals-->
 				</div>
 			</footer>
 		</div>

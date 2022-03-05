@@ -1,17 +1,45 @@
-
-mixin modal() 
+mixin modal(data)
 	//  start modals
-	a(href="modal-call").link-modal-js modal-call 
-	div(id="modal-call"  style="display: none" )
+	//-a(href="modal-call").link-modal-js modal-call
+	div(id="modal-nft"  style="display: none" )
 		+b.modal-win
 			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
+				+e.main-title.text-center
+					h2 Select platform to buy NFT
+				+e.row.row.gy-4
+					if data.lang === 'en'
+						+modalPlatform(1, 'Binance', "https://www.binance.com/en", 'BUY NOW')
+						+modalPlatform(2, 'OpenSea', "https://opensea.io/", 'BUY NOW')
+						+modalPlatform(3, 'Nifty Gateway', "https://niftygateway.com/", 'BUY NOW')
+					if data.lang === 'ua'
+						+modalPlatform(1, 'Binance', "https://www.binance.com/uk-UA", 'КУПИТИ')
+						+modalPlatform(2, 'OpenSea', "https://opensea.io/", 'КУПИТИ')
+						+modalPlatform(3, 'Nifty Gateway', "https://niftygateway.com/", 'КУПИТИ')
+	div(id="modal-donate"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				+e.main-title.text-center
+					h2 Select platform to buy NFT
+				+e.row.row.gy-4
+					if data.lang === 'en'
+						+modalPlatform(4, 'Come back alive', "https://www.comebackalive.in.ua/donate", 'DONATE', 'The goal is to provide the Ukrainian army with the necessary equipment')
+						+modalPlatform(5, 'Your support', "https://www.liqpay.ua/en/checkout/card/checkout_1646497231098424_61437346_XzAnrmPQmxCBihcLiguI", 'DONATE', 'The goal is to help victims of hostilities in Ukraine')
+						+modalPlatform(6, 'Donation', "#", 'DONATE', 'The goal is to provide the Ukrainian army with the necessary equipment')
+					if data.lang === 'ua'
+						+modalPlatform(4, 'Повернися живим', "https://www.comebackalive.in.ua/donate", 'DONATE', 'Мета - забезпечити українську армію необхідною технікою.')
+						+modalPlatform(5, 'Твоя опора', "https://www.liqpay.ua/en/checkout/card/checkout_1646497231098424_61437346_XzAnrmPQmxCBihcLiguI", 'DONATE', 'Мета – допомогти постраждалим від військових дій в Україні.')
+						+modalPlatform(6, 'Пожертва', "#", 'DONATE', '...')
 	// #modal-call
 	
 	// end modals
+
+mixin modalPlatform(imgNum, title, href="#", btnTxt, descr)
+	+e.col.col-sm-4
+		+e.item.text-center(href="#" target="_blank")
+			+e.box
+				img(loading="lazy" src=`img/@2x/modalPlatform-${imgNum}.png` alt="")
+			+e.title-box
+				+e.title=title
+				if descr
+					+e.descr=descr
+			+e.btn=btnTxt
