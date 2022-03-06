@@ -15,7 +15,7 @@ mixin headerBlock(data)
 								| and for Ukrainians.
 							p
 								| Inspired by what we see, what we feel,
-								| what&nbsp;we fight for and what we fight against.
+								| what&nbsp;we&nbsp;fight for and what we fight against.
 						if data.lang === 'ua'
 							h1
 								| arTemple.
@@ -25,7 +25,7 @@ mixin headerBlock(data)
 								| Для українців.
 							p Нас надихає те, що ми бачимо, що відчуваємо, за що боремося та проти чого б’ємося.
 					if data.lang === 'en'
-						+e.btn(href="#") SUPPORT
+						+e.btn(href="#sHelp") SUPPORT
 					if data.lang === 'ua'
 						+e.btn(href="#sHelp") ДОПОМОГТИ
 				.col-md-auto

@@ -258,8 +258,8 @@ function eventHandler() {
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.makeDDGroup();
-	// JSCCommon.animateScroll();
+	//JSCCommon.makeDDGroup();
+	JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;

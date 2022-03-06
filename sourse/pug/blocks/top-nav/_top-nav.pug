@@ -7,7 +7,7 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-			+e.logo(href="/")
+			+e.logo(href="#")
 				img(loading="lazy" src="img/svg/logo.svg" alt="")
 			+mnu()
 	//  мобильное меню
@@ -18,7 +18,7 @@ mixin top-nav(data)
 		.container
 			+e.row.row.align-items-center
 				.col
-					+e.logo(href="/")
+					+e.logo(href="#")
 						img(loading="lazy" src="img/svg/logo-3.svg" alt="")
 				.col-auto.d-none.d-lg-block
 					+e.menu
