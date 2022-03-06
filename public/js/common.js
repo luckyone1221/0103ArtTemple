@@ -320,6 +320,14 @@ function eventHandler() {
 		...defaultSl,
 		...freeMomentum,
 	});
+
+	//-
+	let thisYear = new Date().getFullYear();
+	let currYearItems = document.querySelectorAll('.set-curr-year-js');
+	for(let item of currYearItems){
+		item.innerHTML = thisYear;
+	}
+
 	// modal window
 
 };
