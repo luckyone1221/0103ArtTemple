@@ -1,0 +1,51 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog--js.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title
+				if data.lang === 'en'
+					h2 Our works
+					p If you are not indifferent to the fate of the world and have the desire and opportunity to help Ukraine and Ukrainians in preserving their lives and country, join our charitable mission to support the defense of a small but brave country.
+				if data.lang === 'ua'
+					h2 Кому ви зможете допомогти?
+					p Якщо вам небайдужа доля світу, ви маєте бажання та можливість допомогти Україні та українцям зберегти наші життя та країну, долучайтесь до нашої благодійної місії – підтримати захист маленької, але хороброї країни.
+			+e.slider-wrap
+				.d-none.d-lg-block
+					+arrow()
+				.swiper.sCatalog-slider-js
+					.swiper-wrapper
+						+sCatalogItem({
+							imgNum: 1,
+							name: 'Birds',
+							descr: 'Collection of traditional Ukrainian ornaments for each region',
+						})
+						+sCatalogItem({
+							imgNum: 2,
+							name: 'Ukraine',
+							descr: 'The collection is about Ukrainian nationality, its cultu  re, traditions that was instilled from generation to generation more',
+						})
+						+sCatalogItem({
+							imgNum: 3,
+							name: 'No War',
+							descr: 'In this collection you see the author\'s font called Decay. And the laconic posters made with this font as soon as the 24.02 war started in Ukraine.',
+						})
+						+sCatalogItem({
+							imgNum: 4,
+							name: 'Kids Art',
+							descr: 'This is a usual drawing of each Ukrainian kid.',
+						})
+					.swiper-pagination
+	// end sCatalog
+
+mixin sCatalogItem(data)
+	.swiper-slide
+		+e.item.text-center(href='#' target="_blank")
+			+e.box
+				img(loading="lazy" src=`img/@2x/sCatalog-${data.imgNum}.png` alt="")
+			+e.name=data.name
+			+e.descr.t-box-js
+				+e.txt.t-content-js(class=`${data.txtContentClasses || ''}`)
+					span=data.descr
+				+e.t-btn.t-btn-js(class=`${data.txtContentClasses || 'invisible'}`)
+					span read more
+					span hide

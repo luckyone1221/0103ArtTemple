@@ -84,9 +84,11 @@
 	}
 	&__btn{
 		@extend .btn;
-		@extend .btn-warning;
-		min-width: rem(260);
-
+		//@extend .btn-warning;
+		min-width: 100%;
+		@include media-breakpoint-up(md){
+			min-width: rem(260);
+		}
 	}
 	.soc{
 		display: flex;

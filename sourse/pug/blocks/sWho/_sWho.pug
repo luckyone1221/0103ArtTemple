@@ -3,10 +3,7 @@ mixin sWho(data)
 	+b.SECTION.sWho.section#sWho&attributes(attributes)
 		.container.text-md-start.text-center
 			+e.row.row.gy-4.align-items-center
-				+e.col--left.col-md-4.d-none.d-md-block
-					+e.img
-						img(loading="lazy" src="img/@2x/sWho-img.png" alt="")
-				+e.col--right.col-md-8
+				+e.col--left.col-md-8
 					+b.section-title.pb-0
 						if data.lang === 'en'
 							h2 Who we are
@@ -17,11 +14,11 @@ mixin sWho(data)
 						if data.lang === 'en'
 							p We are Ukrainians who cannot stay away from the genocide taking place in our country.
 							p
-								| This arTemple is a
+								| arTemple is a
 								|
 								span 100% non-profit initiative
 								|
-								| aimed at supporting the&nbsp;Ukrainian army and people who have suffered from a terrible war happening in Ukraine right now as you’re reading this message.
+								| aimed at supporting people who have suffered from a terrible war happening in Ukraine right now as you’re reading this message.
 						if data.lang === 'ua'
 							p Ми українці, які не можуть бути осторонь геноциду, що зараз відбувається на нашій землі.
 							p
@@ -29,4 +26,7 @@ mixin sWho(data)
 								|
 								span 100% некомерційна ініціатива
 								|, спрямована на підтримку української армії та людей, які постраждали від жахливої війни, що відбувається в Україні у цю мить, коли ви читаєте ці слова.
+				+e.col--right.col-md-4.d-none.d-md-block
+					+e.img
+						img(loading="lazy" src="img/@2x/sWho-img.png" alt="")
 	// end sWho

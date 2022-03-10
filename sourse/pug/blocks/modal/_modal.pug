@@ -1,7 +1,6 @@
 mixin modal(data)
 	//  start modals
-	//-a(href="modal-call").link-modal-js modal-call
-	div(id="modal-nft"  style="display: none" )
+	div(id="modal-nft"  style="display: none")
 		+b.modal-win
 			+form-wrap
 				+e.main-title.text-center
@@ -9,11 +8,11 @@ mixin modal(data)
 				+e.row.row.gy-4
 					if data.lang === 'en'
 						+modalPlatform(1, 'Binance', "https://www.binance.com/en", 'BUY NOW')
-						+modalPlatform(2, 'OpenSea', "https://opensea.io/", 'BUY NOW')
+						+modalPlatform(2, 'OpenSea', "https://opensea.io/arTemple", 'BUY NOW')
 						+modalPlatform(3, 'Nifty Gateway', "https://niftygateway.com/", 'BUY NOW')
 					if data.lang === 'ua'
 						+modalPlatform(1, 'Binance', "https://www.binance.com/uk-UA", 'КУПИТИ')
-						+modalPlatform(2, 'OpenSea', "https://opensea.io/", 'КУПИТИ')
+						+modalPlatform(2, 'OpenSea', "https://opensea.io/arTemple", 'КУПИТИ')
 						+modalPlatform(3, 'Nifty Gateway', "https://niftygateway.com/", 'КУПИТИ')
 	div(id="modal-donate"  style="display: none" )
 		+b.modal-win

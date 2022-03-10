@@ -24,10 +24,19 @@ mixin headerBlock(data)
 								br
 								| Для українців.
 							p Нас надихає те, що ми бачимо, що відчуваємо, за що боремося та проти чого б’ємося.
-					if data.lang === 'en'
-						+e.btn(href="#sHelp") SUPPORT
-					if data.lang === 'ua'
-						+e.btn(href="#sHelp") ДОПОМОГТИ
-				.col-md-auto
+					.mb-4.d-md-none
+						+soc()
+					.row.gx-3.gy-3
+						.col-sm-6.col-md-auto
+							if data.lang === 'en'
+								+e.btn.btn-warning(href="https://opensea.io/arTemplearTemple" target="_blank") SUPPORT
+							if data.lang === 'ua'
+								+e.btn.btn-warning(href="https://opensea.io/arTemplearTemple" target="_blank") ПІДТРИМАТИ
+						.col-sm-6.col-md-auto
+							if data.lang === 'en'
+								+e.btn.btn-primary(href="#sHelp") FIND OUT MORE
+							if data.lang === 'ua'
+								+e.btn.btn-primary(href="#sHelp") ДІЗНАТИСЯ БІЛЬШЕ
+				.col-md-auto.d-none.d-md-block
 					+soc()
 	// end headerBlock

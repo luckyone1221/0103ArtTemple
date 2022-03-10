@@ -328,6 +328,62 @@ function eventHandler() {
 		item.innerHTML = thisYear;
 	}
 
+	//luckyone js
+	let sCatalogSlider = new Swiper('.sCatalog-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		loop: true,
+		autoplay: 5000,
+
+		navigation: {
+			nextEl: '.sCatalog--js .swiper-next',
+			prevEl: '.sCatalog--js .swiper-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
+	//another readmore
+	let tBoxes = document.querySelectorAll('.t-box-js');
+	for (let box of tBoxes){
+		let content = box.querySelector('.t-content-js');
+		let btn = box.querySelector('.t-btn-js');
+
+		checkTboxes();
+		btn.addEventListener('click', function (){
+			event.preventDefault();
+			content.classList.toggle('active');
+			this.classList.toggle('active');
+		})
+	}
+	function checkTboxes(){
+		let tBoxes = document.querySelectorAll('.t-box-js');
+
+		for (let box of tBoxes){
+			let content = box.querySelector('.t-content-js');
+			let btn = box.querySelector('.t-btn-js');
+
+			content.classList.remove('active');
+			btn.classList.remove('active');
+			if (multiLineOverflows(content)){
+				btn.classList.remove('invisible');
+				content.classList.remove('active');
+			}
+			else {
+				btn.classList.add('invisible');
+				content.classList.add('active');
+			}
+		}
+	}
+	function multiLineOverflows(el) {
+		return el.scrollHeight > el.clientHeight;
+	}
+	//end luckyone js
+
+
 	// modal window
 
 };

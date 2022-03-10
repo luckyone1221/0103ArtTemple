@@ -286,34 +286,70 @@ ul {
 .control-wrap {
 	position: relative;
 }
-.swiper-button-hand-prev,
-.swiper-button-hand-next{
+.swiper-prev,
+.swiper-next{
+	@include mt();
+	position: absolute;
+	z-index: 10;
+	top: rem(110);
+	//transform: translateY(-50%);
+	width: rem(60);
+	height: rem(60);
+	border-radius: 50%;
+	//background-color: red;
+	//
 
+	border: 1px solid transparent;
+	background-color: $white;
+	&:hover{
+		border: 1px solid $gray-100;
+		box-shadow: 0 0 8px 0 rgba(0,0,0, .25);
+		transform: scale(1.2);
+	}
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.icon{
+		font-size: rem(30);
+		color: $primary;
+	}
 }
-.swiper-button-hand-prev{}
-.swiper-button-hand-next{}
+.swiper-prev{
+	left: rem(-80px);
+}
+.swiper-next{
+	right: rem(-80px);
+}
 
 
 .swiper-pagination {
 	width: 100%;
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	&-bullet {
 		opacity: 1;
-		width: 8px;
-		height: 8px;
+		width: 10px;
+		height: 10px;
 		border-radius: 50%;
-		background-color: #E6E6E6;
+		background-color: transparent;
+		border: 1px solid $primary;
 		outline: none !important;
 		@include mt;
-		margin-left: rem(4);
-		padding-right: rem(4);
+		margin-left: rem(7);
+		padding-right: rem(7);
 		display: inline-block;
 
-		&-active,
-		&:hover {
-			background-color: var(--bs-primary) ;
+		&-active{
+			background-color: $primary!important;
 		}
+		&:hover {
+			background-color: rgba($primary, .5);
+		}
+
 	}
 }
 
@@ -500,4 +536,34 @@ iframe {
 .btn-warning,
 .btn-primary{
 	color: $white!important;
+}
+
+//
+.t-btn-js{
+	cursor: pointer;
+	display: inline-block;
+
+	span:first-child{
+		display: inline-block;
+	}
+
+	span:last-child{
+		display: none;
+	}
+
+	&.active{
+		span:first-child{
+			display: none;
+		}
+
+		span:last-child{
+			display: inline-block;
+		}
+	}
+}
+
+.t-content-js{
+	&:not(.active){
+		@include ell(3);
+	}
 }

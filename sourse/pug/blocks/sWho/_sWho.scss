@@ -11,12 +11,12 @@
 		--bs-gutter-x: #{rem(30)};
 	}
 	&__col{
-		&--left{
+		&--right{
 			@include media-breakpoint-up(xl){
 				width: calc(455px + var(--bs-gutter-x))!important;
 			}
 		}
-		&--right{
+		&--left{
 			@include media-breakpoint-up(xl){
 				width: calc(100% - 455px - var(--bs-gutter-x)) !important;
 			}
