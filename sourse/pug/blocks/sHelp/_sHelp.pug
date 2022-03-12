@@ -12,19 +12,16 @@ mixin sHelp(data)
 					p Усі NFT-об’єкти в arTemple створені українцями. Вони унікальні, проте об’єднані спільним досвідом – війною в Україні. Ви можете придбати будь-який з наявних NFT-об’єктів або оформити індивідуальне замовлення в одного з наших авторів.
 			+e.row.row
 				if data.lang === 'en'
-					+sHelpItem(1, 'For creators', 'If you’re a creator from Ukraine and you’d like to support our army, refugees or volunteers, please contact us. Remember: anything you’ve created can be turned into real-life support for Ukrainians who need it.', data)
+					+sHelpItem(1, 'For creators', 'If you’re a creator from Ukraine and you’d like to support our refugees or volunteers, please contact us. Remember: anything you’ve created can be turned into real-life support for Ukrainians who need it.', data)
 						+e.btn(href="files/For_creators_en.pdf" target="_blank") JOIN
 					+sHelpItem(2, 'For NFT* nerds', 'Every NFT object has to have a unique value, feature, story. So the punch line here is that every single NFT object in our temple is saving someone’s life.', data)
-						//-old modal
-						//-+e.btn.link-modal-js(href="#modal-nft") FIND OUT MORE
 						+e.btn(href="https://opensea.io/arTemple" target="_blank") FIND OUT MORE
 					+sHelpItem(3, 'Donate in other way', 'If you’re not a big fan of NFT or cryptocurrency, you can also donate to the official accounts of the Ukrainian Armed Forces or Ukrainian Volunteering Centre, but we’d prefer that you keep a symbol of our gratitude in NFT format.', data)
 						+e.btn.link-modal-js(href="#modal-donate") DONATE
 				if data.lang === 'ua'
-					+sHelpItem(1, 'Для митців', 'Якщо ви автор з України, хочете підтримати нашу армію та розділяєте наші волонтерські цінності – напишіть нам. Пам’ятайте – все, що ви створюєте, можна перетворити на реальну підтримку українців, які цього потребують вже зараз.', data)
+					+sHelpItem(1, 'Для митців', 'Якщо ви автор з України, хочете підтримати наш народ та розділяєте наші волонтерські цінності – напишіть нам. Пам’ятайте – все, що ви створюєте, можна перетворити на реальну підтримку українців, які цього потребують вже зараз.', data)
 						+e.btn(href="files/For_creators_ua.pdf" target="_blank") ПРИЄДНАТИСЯ
 					+sHelpItem(2, 'Для шанувальників NFT', 'Кожен NFT-об’єкт повинен мати власну історію та цінність, тож в нашому arTemple кожен об’єкт – це реальна можливість зберегти чиєсь життя.', data)
-						//-+e.btn.link-modal-js(href="#modal-nft")
 						+e.btn(href="https://opensea.io/arTemple" target="_blank") ДІЗНАТИСЯ БІЛЬШЕ
 					+sHelpItem(3, 'Допомогти в інший спосіб', 'Якщо ви не є шанувальником технології NFT чи криптовалюти, ви можете зробити пожертву безпосередньо на офіційні рахунки Збройних Сил України чи Українського волонтерського центра, проте ми б хотіли, аби ви отримали символ нашої вдячності у форматі NFT.', data)
 						+e.btn.link-modal-js(href="#modal-donate") ПІДТРИМАТИ

@@ -27,14 +27,14 @@ mixin headerBlock(data)
 					.mb-4.d-md-none
 						+soc()
 					.row.gx-3.gy-3
-						.col-sm-6.col-md-auto
+						.col-sm-6.col-md-12
 							if data.lang === 'en'
-								+e.btn.btn-warning(href="https://opensea.io/arTemplearTemple" target="_blank") SUPPORT
+								+e.btn.btn-warning(href="https://opensea.io/arTemple" target="_blank") SUPPORT
 							if data.lang === 'ua'
-								+e.btn.btn-warning(href="https://opensea.io/arTemplearTemple" target="_blank") ПІДТРИМАТИ
-						.col-sm-6.col-md-auto
+								+e.btn.btn-warning(href="https://opensea.io/arTemple" target="_blank") ПІДТРИМАТИ
+						.col-sm-6.col-md-12
 							if data.lang === 'en'
-								+e.btn.btn-primary(href="#sHelp") FIND OUT MORE
+								+e.btn.btn-warning(href="#sHelp") FIND OUT MORE
 							if data.lang === 'ua'
 								+e.btn.btn-primary(href="#sHelp") ДІЗНАТИСЯ БІЛЬШЕ
 				.col-md-auto.d-none.d-md-block

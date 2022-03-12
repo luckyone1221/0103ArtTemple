@@ -5,10 +5,10 @@ mixin sCatalog(data)
 			+b.section-title
 				if data.lang === 'en'
 					h2 Our works
-					p If you are not indifferent to the fate of the world and have the desire and opportunity to help Ukraine and Ukrainians in preserving their lives and country, join our charitable mission to support the defense of a small but brave country.
+					//-p If you are not indifferent to the fate of the world and have the desire and opportunity to help Ukraine and Ukrainians in preserving their lives and country, join our charitable mission to support the defense of a small but brave country.
 				if data.lang === 'ua'
 					h2 Кому ви зможете допомогти?
-					p Якщо вам небайдужа доля світу, ви маєте бажання та можливість допомогти Україні та українцям зберегти наші життя та країну, долучайтесь до нашої благодійної місії – підтримати захист маленької, але хороброї країни.
+					//-p Якщо вам небайдужа доля світу, ви маєте бажання та можливість допомогти Україні та українцям зберегти наші життя та країну, долучайтесь до нашої благодійної місії – підтримати захист маленької, але хороброї країни.
 			+e.slider-wrap
 				.d-none.d-lg-block
 					+arrow()
@@ -43,7 +43,7 @@ mixin sCatalogItem(data)
 			+e.box
 				img(loading="lazy" src=`img/@2x/sCatalog-${data.imgNum}.png` alt="")
 			+e.name=data.name
-			+e.descr.t-box-js
+			//-+e.descr.t-box-js
 				+e.txt.t-content-js(class=`${data.txtContentClasses || ''}`)
 					span=data.descr
 				+e.t-btn.t-btn-js(class=`${data.txtContentClasses || 'invisible'}`)
