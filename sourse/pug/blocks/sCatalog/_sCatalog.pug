@@ -7,33 +7,70 @@ mixin sCatalog(data)
 					h2 Our works
 					//-p If you are not indifferent to the fate of the world and have the desire and opportunity to help Ukraine and Ukrainians in preserving their lives and country, join our charitable mission to support the defense of a small but brave country.
 				if data.lang === 'ua'
-					h2 Кому ви зможете допомогти?
+					h2 Наші роботи
 					//-p Якщо вам небайдужа доля світу, ви маєте бажання та можливість допомогти Україні та українцям зберегти наші життя та країну, долучайтесь до нашої благодійної місії – підтримати захист маленької, але хороброї країни.
 			+e.slider-wrap
 				.d-none.d-lg-block
 					+arrow()
 				.swiper.sCatalog-slider-js
 					.swiper-wrapper
+						//-stab
+							+sCatalogItem({
+								imgNum: 1,
+								name: 'Birds',
+								descr: 'Collection of traditional Ukrainian ornaments for each region',
+							})
 						+sCatalogItem({
-							imgNum: 1,
-							name: 'Birds',
-							descr: 'Collection of traditional Ukrainian ornaments for each region',
+							imgNum: 'c-1',
+							name: 'Eyes of fear',
+							href: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/81053435390430816197225458191702355843716621389630566335648008364637007380481/',
 						})
 						+sCatalogItem({
-							imgNum: 2,
-							name: 'Ukraine',
-							descr: 'The collection is about Ukrainian nationality, its cultu  re, traditions that was instilled from generation to generation more',
+							imgNum: 'c-2',
+							name: 'New old home',
+							href: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/81053435390430816197225458191702355843716621389630566335648008339348239941633/',
 						})
 						+sCatalogItem({
-							imgNum: 3,
-							name: 'No War',
-							descr: 'In this collection you see the author\'s font called Decay. And the laconic posters made with this font as soon as the 24.02 war started in Ukraine.',
+							imgNum: 'c-3',
+							name: 'Birds of Ukraine',
+							href: 'https://opensea.io/collection/birds-of-ukraine',
 						})
 						+sCatalogItem({
-							imgNum: 4,
-							name: 'Kids Art',
-							descr: 'This is a usual drawing of each Ukrainian kid.',
+							imgNum: 'c-4',
+							name: 'Ethno Ukraine now',
+							href: 'https://opensea.io/collection/ethno-ukaraine-now',
 						})
+						+sCatalogItem({
+							imgNum: 'c-5',
+							name: 'Day 10. Fight back.',
+							href: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/81053435390430816197225458191702355843716621389630566335648008409716984119297/',
+						})
+						+sCatalogItem({
+							imgNum: 'c-6',
+							name: 'Sunflowers of Love',
+							href: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/81053435390430816197225458191702355843716621389630566335648008377831146913793/',
+						})
+						+sCatalogItem({
+							imgNum: 'c-7',
+							name: 'Ukrainian kids art',
+							href: 'https://opensea.io/collection/ukrainian-kids-art',
+						})
+						+sCatalogItem({
+							imgNum: 'c-8',
+							name: 'Stop the war_UA',
+							href: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/81053435390430816197225458191702355843716621389630566335648008462493542252545/',
+						})
+						+sCatalogItem({
+							imgNum: 'c-9',
+							name: 'It\'s not your child there... today',
+							href: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/81053435390430816197225458191702355843716621389630566335648008442702332952577/',
+						})
+						+sCatalogItem({
+							imgNum: 'c-10',
+							name: 'Stop it',
+							href: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/81053435390430816197225458191702355843716621389630566335648008374532612030465/',
+						})
+
 					.swiper-pagination
 	// end sCatalog
 
@@ -41,7 +78,7 @@ mixin sCatalogItem(data)
 	.swiper-slide
 		+e.item.text-center(href='#' target="_blank")
 			+e.box
-				img(loading="lazy" src=`img/@2x/sCatalog-${data.imgNum}.png` alt="")
+				img(loading="lazy" src=`img/@2x/sCatalog-${data.imgNum}.jpg` alt="")
 			+e.name=data.name
 			//-+e.descr.t-box-js
 				+e.txt.t-content-js(class=`${data.txtContentClasses || ''}`)
