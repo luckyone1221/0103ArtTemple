@@ -76,7 +76,7 @@ mixin sCatalog(data)
 
 mixin sCatalogItem(data)
 	.swiper-slide
-		+e.item.text-center(href='#' target="_blank")
+		+e.item.text-center(href=data.href target="_blank")
 			+e.box
 				img(loading="lazy" src=`img/@2x/sCatalog-${data.imgNum}.jpg` alt="")
 			+e.name=data.name
