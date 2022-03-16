@@ -1,10 +1,14 @@
 // start .sWho
 .sWho {
-	--sPT: #{rem(60)};
-	--sPB: #{rem(60)};
+	--sPT: #{rem(5)};
+	--sPB: 59px;
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(114)};
-		--sPB: #{rem(115)};
+		--sPT: #{rem(100)};
+		--sPB: #{rem(100)};
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: #{rem(159)};
+		--sPB: #{rem(185)};
 	}
 
 	&__row{
@@ -13,12 +17,12 @@
 	&__col{
 		&--right{
 			@include media-breakpoint-up(xl){
-				width: calc(455px + var(--bs-gutter-x))!important;
+				width: calc(505px + var(--bs-gutter-x))!important;
 			}
 		}
 		&--left{
 			@include media-breakpoint-up(xl){
-				width: calc(100% - 455px - var(--bs-gutter-x)) !important;
+				width: calc(100% - 505px - var(--bs-gutter-x)) !important;
 			}
 		}
 	}
@@ -33,6 +37,19 @@
 		}
 	}
 	.section-title{
+		//padding-top: 62px;
+
+		h2{
+			@include media-breakpoint-down(md){
+				font-size: 28px;
+				line-height: calc(35/28);
+			}
+
+			margin-bottom: 13px;
+			@include media-breakpoint-up(md){
+				margin-bottom: 10px;
+			}
+		}
 		&__img{
 			display: block;
 			border-radius: rem(27);
@@ -49,16 +66,35 @@
 			}
 		}
 
+		//16px
 		p{
-			margin-bottom: rem(27);
+			//16px
 			&:last-child{
 				margin-bottom: 0;
 			}
 
-			font-weight: 500;
+			max-width: 89%;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 18px;
+			margin-bottom: 35px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(34);
+				font-size: rem(21);
+				max-width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@include media-breakpoint-up(xxl){
+				max-width: 552px;
+			}
+
+			line-height: 1.6;
+			font-weight: 400;
+
 			span{
-				font-weight: 700;
-				color: $warning;
+				font-weight: 600;
+				color: $primary;
 			}
 		}
 	}

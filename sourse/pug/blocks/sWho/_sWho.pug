@@ -9,10 +9,10 @@ mixin sWho(data)
 							h2 Who we are
 						if data.lang === 'ua'
 							h2 Хто ми
-						+e.img.d-md-none
-							img(loading="lazy" src="img/@2x/sWho-img.png" alt="")
 						if data.lang === 'en'
 							p We are Ukrainians who cannot stay away from the genocide taking place in our country.
+							+e.img.d-md-none
+								img(loading="lazy" src="img/@2x/sWho-img.png" alt="")
 							p
 								| arTemple is a
 								|
@@ -21,6 +21,8 @@ mixin sWho(data)
 								| aimed at supporting people who have suffered from a terrible war happening in Ukraine right now as you’re reading this message.
 						if data.lang === 'ua'
 							p Ми українці, які не можуть бути осторонь геноциду, що зараз відбувається на нашій землі.
+							+e.img.d-md-none
+								img(loading="lazy" src="img/@2x/sWho-img.png" alt="")
 							p
 								| arTemple - це
 								|

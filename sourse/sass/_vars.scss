@@ -71,7 +71,7 @@ $purple: #6f42c1 !default;
 $pink: #d63384 !default;
 $red: #dc3545 !default;
 $orange: #fd7e14 !default;
-$yellow: #FFD101;
+$yellow: #FAB32A;
 $green: #198754 !default;
 $teal: #20c997 !default;
 $cyan: #0dcaf0 !default;
@@ -542,7 +542,7 @@ $table-variants: ("primary": shift-color($primary, $table-bg-scale),
 $input-btn-padding-y: .375rem !default;
 $input-btn-padding-x: .75rem !default;
 $input-btn-font-family: null !default;
-$input-btn-font-size: rem(20);
+$input-btn-font-size: rem(18);
 $input-btn-line-height: $line-height-base !default;
 
 $input-btn-focus-width: .25rem !default;
@@ -569,7 +569,7 @@ $input-btn-border-width: $border-width !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-padding-y: rem(14);
+$btn-padding-y: rem(16);
 $btn-padding-x: rem(20);
 $btn-font-family: $input-btn-font-family !default;
 $btn-font-size: $input-btn-font-size !default;

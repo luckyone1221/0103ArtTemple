@@ -2,41 +2,40 @@ mixin headerBlock(data)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+pic('headerBlock-bg.png')(class="headerBlock__bg")
-		.container
-			.row.gy-4
+		.container.text-center.text-md-start
+			+e.main-row.row
 				.col-md
 					+b.section-title
 						if data.lang === 'en'
 							h1
-								| arTemple.
-								br
+								//-| arTemple.
+								//-br
 								| Created by Ukrainians
-								br
+								|
+								br.d-none.d-md-block
 								| and for Ukrainians.
 							p
 								| Inspired by what we see, what we feel,
 								| what&nbsp;we&nbsp;fight for and what we fight against.
 						if data.lang === 'ua'
 							h1
-								| arTemple.
-								br
+								//-| arTemple.
+								//-br
 								| Створено українцями.
 								br
 								| Для українців.
 							p Нас надихає те, що ми бачимо, що відчуваємо, за що боремося та проти чого б’ємося.
-					.mb-4.d-md-none
-						+soc()
 					.row.gx-3.gy-3
-						.col-sm-6.col-md-12
+						.col-sm-6.col-md-auto
 							if data.lang === 'en'
-								+e.btn.btn-warning(href="https://opensea.io/arTemple" target="_blank") SUPPORT
+								+e.btn.btn-primary(href="https://opensea.io/arTemple" target="_blank") SUPPORT
 							if data.lang === 'ua'
-								+e.btn.btn-warning(href="https://opensea.io/arTemple" target="_blank") ПІДТРИМАТИ
-						.col-sm-6.col-md-12
+								+e.btn.btn-primary(href="https://opensea.io/arTemple" target="_blank") ПІДТРИМАТИ
+						.col-sm-6.col-md-auto
 							if data.lang === 'en'
 								+e.btn.btn-warning(href="#sHelp") FIND OUT MORE
 							if data.lang === 'ua'
-								+e.btn.btn-primary(href="#sHelp") ДІЗНАТИСЯ БІЛЬШЕ
-				.col-md-auto.d-none.d-md-block
+								+e.btn.btn-warning(href="#sHelp") ДІЗНАТИСЯ БІЛЬШЕ
+				.col-md-auto.order-first.order-md-last
 					+soc()
 	// end headerBlock

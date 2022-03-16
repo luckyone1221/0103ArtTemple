@@ -317,10 +317,11 @@ ul {
 	}
 }
 .swiper-prev{
-	left: rem(-80px);
+	right: calc(100% + #{rem(20px)});
 }
 .swiper-next{
-	right: rem(-80px);
+	left: calc(100% + #{rem(20px)} + 10px);
+	//??? 10px shift
 }
 
 
@@ -335,8 +336,8 @@ ul {
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
-		background-color: transparent;
-		border: 1px solid $primary;
+		background-color: #DAE3EE;
+		//border: 1px solid $primary;
 		outline: none !important;
 		@include mt;
 		margin-left: rem(7);
@@ -565,5 +566,12 @@ iframe {
 .t-content-js{
 	&:not(.active){
 		@include ell(3);
+	}
+}
+
+.container{
+	@include media-breakpoint-down(sm){
+		padding-left: 16px!important;
+		padding-right: 16px!important;
 	}
 }

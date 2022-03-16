@@ -1,9 +1,12 @@
 // start .sMission
 .sMission {
+	--sPT: 115px;
+	--sPB: 117px;
+	--sTPB: 48px;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(115)};
-		--sPB: #{rem(115)};
-		--sTPB: #{rem(50)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(58)};
 	}
 
 	position: relative;
@@ -32,7 +35,8 @@
 			opacity: .35;
 		}
 		&:after{
-			opacity: .25;
+			background: linear-gradient(0.72deg, #23395A -0.14%, #152742 47.14%);
+			opacity: 0.55;
 		}
 
 		img{
@@ -43,29 +47,56 @@
 	}
 	.section-title{
 		h2{
-
+			margin-bottom: 14px;
+			@include media-breakpoint-down(sm){
+				margin-bottom: 15px;
+				font-size: 28px;
+				line-height: calc(35/28);
+			}
 		}
 		p{
-			max-width: rem(930);
+			max-width: rem(954);
+			margin-left: auto;
+			margin-right: auto;
 			font-weight: 500;
+
+			font-size: 16px;
+			line-height: 1.65;
+			@include media-breakpoint-up(sm){
+				line-height: 1.6;
+				font-size: rem(18);
+			}
 		}
 	}
 	&__row{
 		--bs-gutter-x: #{rem(34)};
-	}
-	&__item-row{
-		--bs-gutter-x: #{rem(24)};
-		--bs-gutter-y: #{rem(20)};
+		--bs-gutter-y: 49px;
+
+		& > *:not(:last-child){
+			&:after{
+				content: '';
+				@include media-breakpoint-up(lg){
+					content: none;
+				}
+
+				display: block;
+				margin: 33px auto 0 auto;
+				width: 233px;
+				height: 1px;
+				background-color: $white;
+			}
+		}
 	}
 	&__ball{
-		width: rem(120);
-		height: rem(120);
+		width: 100px;
+		height: 100px;
 		@include media-breakpoint-up(sm){
 			width: rem(164);
 			height: rem(164);
 		}
+		margin: 0 auto 15px;
 		@include media-breakpoint-up(lg){
-			margin: 0 auto;
+			margin: 0 auto rem(20);
 		}
 
 		background-color: $primary;
@@ -79,28 +110,40 @@
 			width: auto;
 			height: auto;
 
-			max-width: 75%;
-			max-height: 75%;
+			max-width: 50%;
+			max-height: 50%;
 			@include media-breakpoint-up(xl){
-				max-width: 90%;
-				max-height: 90%;
+				max-width: 50%;
+				max-height: 50%;
 			}
 		}
 	}
 	&__txt-content{
-		@include media-breakpoint-up(xl){
-			max-width: rem(354);
-			margin: 0 auto;
-		}
+		max-width: 354px;
+		margin: 0 auto;
 
 		h4{
 			font-weight: 500;
+
+			@include media-breakpoint-down(sm){
+				font-size: 24px;
+				line-height: calc(30/24);
+			}
+
 			line-height: calc(38/30);
-			margin-bottom: rem(15);
+			margin-bottom: 14px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(15);
+			}
 		}
 		p{
-			font-size: rem(16);
-			line-height: calc(20/16);
+			font-weight: 400;
+			font-size: 16px;
+
+			line-height: 1.63;
+			@include media-breakpoint-up(sm){
+				line-height: 1.5;
+			}
 
 			&:last-child{
 				margin-bottom: 0;

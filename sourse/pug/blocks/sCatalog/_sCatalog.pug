@@ -2,7 +2,7 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog--js.section#sCatalog&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title.text-center
 				if data.lang === 'en'
 					h2 Our works
 					//-p If you are not indifferent to the fate of the world and have the desire and opportunity to help Ukraine and Ukrainians in preserving their lives and country, join our charitable mission to support the defense of a small but brave country.
@@ -79,7 +79,8 @@ mixin sCatalogItem(data)
 		+e.item.text-center(href=data.href target="_blank")
 			+e.box
 				img(loading="lazy" src=`img/@2x/sCatalog-${data.imgNum}.jpg` alt="")
-			+e.name=data.name
+				+e.name--mob=data.name
+			+e.name--dt=data.name
 			//-+e.descr.t-box-js
 				+e.txt.t-content-js(class=`${data.txtContentClasses || ''}`)
 					span=data.descr

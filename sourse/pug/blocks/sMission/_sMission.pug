@@ -2,7 +2,7 @@ mixin sMission(data)
 	// start sMission
 	+b.SECTION.sMission.section#sMission&attributes(attributes)
 		+pic('sMission.jpg')(class="sMission__bg")
-		.container
+		.container.text-center
 			+b.section-title
 				if data.lang === 'en'
 					h2 Our mission and goals
@@ -10,11 +10,11 @@ mixin sMission(data)
 				if data.lang === 'ua'
 					h2 Наша місія та цілі
 					p В arTemple талановиті українці відкривають світові свої душі: через малюнки, ілюстрації, фотографії, відео, музику, вірші, анімацію, 3D тощо. Якщо ці українські душі перегукуються з вами, і якщо ви хочете врятувати їх від знищення – долучайтесь до нашої ініціативи, поки ще є час.
-			+e.row.row.gy-4
+			+e.row.row
 				if data.lang === 'en'
 					+sMissionItem('@2x/sMission-1.png', `Help our people`, `Millions of people in Ukraine are suffering from war and they need a helping hand today. Warm housing, food, water, medicines, emergency treatment, safer areas - together with you we can provide all these things to those who are in a desparate need.`)
-					+sMissionItem('@2x/sMission-2.png', `Unite the world`, `Сompassionate people from all over the world are eager to help the Ukrainians. arTemple is created to allow anybody to provide their help by experiencing our culture, feelings, struggles and victories.`)
-					+sMissionItem('@2x/sMission-3.png', `Share the truth`, `arTmeple is created at the epicenter of war. The world needs to see the ugly truth to learn the peace lesson. And we are here to show the truth.`)
+					+sMissionItem('@2x/sMission-2.png', `Share truth`, `arTmeple is created at the epicenter of war. The world needs to see the ugly truth to learn the peace lesson. And we are here to show it.`)
+					+sMissionItem('@2x/sMission-3.png', `Unite the world`, `Сompassionate people from all over the world are eager to help the Ukrainians. arTemple is created to allow anybody to provide their help by experiencing our culture, feelings, struggles and victories.`)
 				if data.lang === 'ua'
 					+sMissionItem('@2x/sMission-1.png', `Допомогти нашим людям`, `Сьогодні мільйони людей в Україні страждають від війни та потребують допомоги. Теплий дім, їжа, вода, ліки, невідкладна допомога, більш безпечний простір – разом із вами ми можемо забезпечити це тим, хто цього вкрай потребує.`)
 					+sMissionItem('@2x/sMission-2.png', `Об'єднати світ`, `Милосердні люди з усього світу прагнуть допомогти українцям. arTemple створено, щоб будь-хто міг надати свою допомогу через пізнання нашої культури, почуттів, нашої боротьби та перемоги.`)
@@ -23,11 +23,8 @@ mixin sMission(data)
 
 mixin sMissionItem(imgPass, title, descr)
 	.col-lg-4
-		+e.item-row.row.align-items-center
-			.col-auto.col-lg-12
-				+e.ball
-					img(loading="lazy" src=`img/${imgPass}` alt="")
-			.col.col-lg-12.text-lg-center
-				+e.txt-content
-					h4=title
-					p!=descr
+		+e.ball
+			img(loading="lazy" src=`img/${imgPass}` alt="")
+		+e.txt-content
+			h4=title
+			p!=descr

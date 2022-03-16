@@ -1,7 +1,7 @@
 .toggle-menu-mobile {
-	--h: 4px;
+	--h: 2px;
 	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--position: 5px;
 	&.on span {
 		--color: transparent;
 	}
@@ -13,8 +13,9 @@
 	display: block;
 	height: calc(var(--h)* 12);
 	position: relative;
-	font-size: 32px;
-	width: 1em;
+	width: 14px;
+
+
 	cursor: pointer;
 	span:after,
 	span:before {

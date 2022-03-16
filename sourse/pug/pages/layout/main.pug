@@ -22,34 +22,36 @@ html(lang="ru")
 			title title
 		meta(name="description", content="arTemple - допомога українській армії")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		//- meta(name="viewport", content="width=device-width, shrink-to-fit=no")
-		//- meta(name="viewport",  content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no")
-		//- script.
-		//- 	let viewport = document.querySelector("meta[name=viewport]");
-		//- 	var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-		//- 	if (is_safari) {
-		//- 		//- alert(navigator.userAgent);
-		//- 		function w() {
-		//- 			this.outerWidth > 575 
-		//- 				? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
-		//- 				:  viewport.content = "width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
-		//- 			//- alert(this.outerWidth + ', '+  viewport.content);
-		//- 		}
-		//- 		 w();
-		//- 		window.addEventListener('resize', () => { 
-		//- 		 w();
-		//- 		}, { passive: true });
-		//- 	}
 		meta(name="viewport", content="width=device-width,initial-scale=1.0,  shrink-to-fit=no")
 		//-link(type="image/ico", href='img/favicon.ico', rel='shortcut icon')
 		link(type="image/png", href='img/favicon-png.png', rel='shortcut icon')
 		<meta name="format-detection" content="telephone=no">
 		+allcss()
+		| <!-- Global site tag (gtag.js) - Google Analytics -->
+		| <script async src="https://www.googletagmanager.com/gtag/js?id=G-V0XBR72JPJ"></script>
+		| <script>
+		|   window.dataLayer = window.dataLayer || [];
+		|   function gtag(){dataLayer.push(arguments);}
+		|   gtag('js', new Date());
+		|
+		|   gtag('config', 'G-V0XBR72JPJ');
+		| </script>
+		| <!-- Google Tag Manager -->
+		| <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		| new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		| j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		| 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		| })(window,document,'script','dataLayer','GTM-5578V65');</script>
+		| <!-- End Google Tag Manager -->
 	block variables
 	//- style.
 	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
 	//- body.loaded_hiding(class= mainPage) 
-	body(class= mainPage data-bg= bg)
+	body(class=mainPage data-bg=bg)
+		| <!-- Google Tag Manager (noscript) -->
+		| <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5578V65"
+		| height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		| <!-- End Google Tag Manager (noscript) -->
 		.main-wrapper
 			block pagecontent
 				h3 content
