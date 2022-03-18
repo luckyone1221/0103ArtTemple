@@ -2,7 +2,7 @@
 .sCatalog {
   overflow: hidden;
 
-  --sPT: #{rem(40)};
+  --sPT: 66px;
   --sPB: #{rem(45)};
   --sTPB: #{rem(30)};
   @include media-breakpoint-up(md) {

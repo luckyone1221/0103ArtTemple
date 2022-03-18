@@ -3,7 +3,7 @@ mixin sHelp(data)
 	+b.SECTION.sHelp.section#sHelp&attributes(attributes)
 		+pic('sHelp-bg.jpg')(class="sHelp__bg")
 		.container.text-center.text-lg-start
-			+b.section-title
+			+b.section-title.text-center
 				if data.lang === 'en'
 					h2 Want to know how you can help?
 					p All NFT objects in arTemple are created by Ukrainians. They’re unique and have a common thread - war in Ukraine. You can purchase any of the existing objects or place a custom order via email.
@@ -18,6 +18,7 @@ mixin sHelp(data)
 						+e.btn(href="https://opensea.io/arTemple" target="_blank") FIND OUT MORE
 					+sHelpItem(3, 'Donate in other way', 'If you’re not a big fan of NFT or cryptocurrency, you can also donate to the official accounts of the Ukrainian Armed Forces or Ukrainian Volunteering Centre, but we’d prefer that you keep a symbol of our gratitude in NFT format.', data)
 						+e.btn.link-modal-js(href="#modal-donate") DONATE
+						//-+e.btn.link-modal-js(href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-rahunok-dlya-gumanitarnoyi-dopomogi-ukrayintsyam-postrajdalim-vid-rosiyskoyi-agresiyi" target="_blank") DONATE
 				if data.lang === 'ua'
 					+sHelpItem(1, 'Для митців', 'Якщо ви автор з України, хочете підтримати наш народ та розділяєте наші волонтерські цінності – напишіть нам. Пам’ятайте – все, що ви створюєте, можна перетворити на реальну підтримку українців, які цього потребують вже зараз.', data)
 						+e.btn(href="files/For_creators_ua.pdf" target="_blank") ПРИЄДНАТИСЯ
@@ -25,6 +26,7 @@ mixin sHelp(data)
 						+e.btn(href="https://opensea.io/arTemple" target="_blank") ДІЗНАТИСЯ БІЛЬШЕ
 					+sHelpItem(3, 'Допомогти в інший спосіб', 'Якщо ви не є шанувальником технології NFT чи криптовалюти, ви можете зробити пожертву безпосередньо на офіційні рахунки Збройних Сил України чи Українського волонтерського центра, проте ми б хотіли, аби ви отримали символ нашої вдячності у форматі NFT.', data)
 						+e.btn.link-modal-js(href="#modal-donate") ПІДТРИМАТИ
+						//-+e.btn.link-modal-js(href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-rahunok-dlya-gumanitarnoyi-dopomogi-ukrayintsyam-postrajdalim-vid-rosiyskoyi-agresiyi" target="_blank") ПІДТРИМАТИ
 			+e.read-more
 				if data.lang === 'en'
 					| *Click
