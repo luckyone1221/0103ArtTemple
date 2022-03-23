@@ -26,6 +26,13 @@ mixin top-nav(data)
 							+mnu()
 						if data.lang === "ua"
 							+mnuUa()
+				.col-auto.d-lg-none
+					+e.menu
+						ul
+							if data.lang === "en"
+								li: a(href="https://opensea.io/arTemple") purchase NFT
+							if data.lang === "ua"
+								li: a(href="https://opensea.io/arTemple") Придбати NFT
 				.col-auto
 					+e.langs-box
 						+e.inner
