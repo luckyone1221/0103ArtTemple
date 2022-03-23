@@ -52,6 +52,12 @@
 			align-items: center;
 
 			& > li{
+				&:first-child{
+					& > a{
+						color: $yellow-logo;
+					}
+				}
+
 				//margin-right: var(--bs-gutter-x, #{rem(24)});
 				margin-right: rem(60);
 				@include media-breakpoint-up(xxl){

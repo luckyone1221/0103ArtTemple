@@ -12,7 +12,7 @@
 		--sTPB: #{rem(48)};
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: #{rem(325)};
+		--sPT: #{rem(260)};
 		--sPB: #{rem(60)};
 		--sTPB: #{rem(48)};
 	}
@@ -173,7 +173,24 @@
 			}
 		}
 	}
-	&__{}
+
+	//
+	&__pdf-link{
+		padding-top: rem(15);
+		font-weight: 400;
+		font-size: rem(16);
+		color: $white;
+
+		a{
+			color: $white!important;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+
+		}
+
+	}
 	&__{}
 	&__{}
 	&__{}

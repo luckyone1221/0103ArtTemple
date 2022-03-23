@@ -28,14 +28,27 @@ mixin headerBlock(data)
 					.row.gx-3.gy-3
 						.col-sm-6.col-md-auto
 							if data.lang === 'en'
-								+e.btn.btn-primary(href="https://opensea.io/arTemple" target="_blank") SUPPORT
+								+e.btn.btn-primary(href="https://opensea.io/arTemple" target="_blank") PURCHASE NFT
 							if data.lang === 'ua'
-								+e.btn.btn-primary(href="https://opensea.io/arTemple" target="_blank") ПІДТРИМАТИ
+								+e.btn.btn-primary(href="https://opensea.io/arTemple" target="_blank") ПРИДБАТИ NFT
 						.col-sm-6.col-md-auto
 							if data.lang === 'en'
 								+e.btn.btn-warning(href="#sHelp") FIND OUT MORE
 							if data.lang === 'ua'
 								+e.btn.btn-warning(href="#sHelp") ДІЗНАТИСЯ БІЛЬШЕ
+						.col-12
+							if data.lang === 'en'
+								+e.pdf-link
+									| Click
+									|
+									a(href="files/NFT-en_instructions.pdf" target="_blank") here
+									|
+									| to get a purchasing NFT instruction.
+							if data.lang === 'ua'
+								+e.pdf-link
+									| Знайти інструкцію по придбанню NFT
+									|
+									a(href="files/NFT-en_instructions.pdf" target="_blank") тут.
 				.col-md-auto.order-first.order-md-last
 					+soc()
 	// end headerBlock

@@ -1,6 +1,6 @@
 // start .sWho
 .sWho {
-	--sPT: #{rem(5)};
+	--sPT: #{rem(80)};
 	--sPB: 59px;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(100)};

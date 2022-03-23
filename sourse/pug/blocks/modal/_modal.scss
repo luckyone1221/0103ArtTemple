@@ -132,6 +132,10 @@
 			font-size: rem(24);
 			line-height: calc(30/24);
 
+			@include media-breakpoint-up(sm){
+				min-height: rem(60);
+			}
+
 			margin-bottom: rem(10);
 			&:last-child{
 				margin-bottom: 0;
