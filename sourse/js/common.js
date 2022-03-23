@@ -196,8 +196,8 @@ const JSCCommon = {
 	//pure js
 	animateScroll(topShift=80) {
 		document.addEventListener('click', function (){
-			if (event.target.closest('.menu li a, .scroll-link')) {
-				let self = event.target.closest('.menu li a, .scroll-link');
+			if (event.target.closest('.menu li:not(:first-child) a, .scroll-link')) {
+				let self = event.target.closest('.menu li:not(:first-child) a, .scroll-link');
 				event.preventDefault();
 
 				let targetSelector = self.getAttribute('href');
