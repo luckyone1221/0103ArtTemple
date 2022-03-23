@@ -2,14 +2,17 @@ mixin menu-toggle()
 	+b.toggle-menu-mobile--js
 		span
 
-mixin mob-mnu()
+mixin mob-mnu(data)
 	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+e.logo(href="#")
 				img(loading="lazy" src="img/svg/logo.svg" alt="")
-			+mnu()
+			if data.lang === "en"
+				+mnu()
+			if data.lang === "ua"
+				+mnuUa()
 	//  мобильное меню
 
 mixin top-nav(data)
@@ -47,5 +50,5 @@ mixin top-nav(data)
 					+menu-toggle()
 	// end top-nav
 
-mixin topNavItem(txt, href="")
+mixin topNavItem(txt, href="#")
 	+e.lang-item(href=href)=txt
